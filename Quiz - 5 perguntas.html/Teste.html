@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Quiz</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+        body {
+            border: 0;
+            margin: 0 auto;
+            background-color: #e3e3eb;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+
+        }
+        .boas-vindas {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /*ocupa a altura toda da tela pra dar espaço de centralizar*/
+            gap: 25px;
+            color: #1E1B4B;
+            font-size: 35px;
+
+        }
+        .botao-iniciar-teste {
+            height: 80px;
+            width: 350px;
+            background-color: #7B68EE;
+            border-radius: 35px;
+            color: #fff;
+            font-size: 28px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+
+        }
+        .botao-iniciar-teste:hover {
+            background-color: #6A5ACD;
+            box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.2); /*terceiro valor (desfoque) de sombra*/
+
+
+        }
+
+        .teste {
+            flex-direction: column;
+            
+        }
+
+        h2 {
+            color: rgb(26, 26, 71);
+            font-size: 25px;
+
+        }
+        
+
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 35px;
+            flex-direction: column;
+            border-radius: 20px;
+            border: 5px solid #7575c7;
+            gap: 35px;
+
+            
+        }
+        p {
+            font-size: 20px;
+        }
+
+        .pergunta1, .pergunta2, .pergunta3, .pergunta4, .pergunta5{
+            display: flex;
+            height: 50px;
+            width: 900px;
+            padding: 10px;
+            align-items: center;
+            font-size: 20px;
+            background-color: #cfcfe5;
+            border-radius: 35px;
+
+        }
+        .pergunta1:hover, .pergunta2:hover, .pergunta3:hover, .pergunta4:hover, .pergunta5:hover {
+            background-color: #b2b2e3;
+
+
+        }
+        .pergunta1:has(input:checked), .pergunta2:has(input:checked), .pergunta3:has(input:checked), .pergunta4:has(input:checked), .pergunta5:has(input:checked) {
+            background-color: #b2b2e3;
+        }
+
+        span {
+            padding: 10px;
+
+        }
+
+        .botao-enviar {
+            width: 500px;
+            height: 50px;
+            font-size: 18px;
+            align-self: center;
+            background-color: #7B68EE;
+            color: #fff;
+            border-radius: 25px;
+            border: none;
+            cursor:pointer;
+        }
+
+        .botao-enviar:hover {
+            background-color: #6A5ACD;
+            box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.2);
+        }
+    
+
+        
+    </style>
+</head>
+<body>
+    <div class="boas-vindas">
+        <h1>Bem-vindo ao Teste de Carreira Tech</h1>
+        <button class="botao-iniciar-teste">Iniciar Teste</button>
+    </div>
+
+<!--Perguntas-->
+
+    <div class="teste"> 
+        <form>
+    <p>Responda 5 perguntas rápidas e descubra qual área da tecnologia combina mais com você!</p>
+
+        <h2>1 - Quando você entra em um site ou aplicativo, o que mais chama a sua atenção?</h2>
+
+            <label class="pergunta1"> 
+        <input type="radio" name="pergunta1" value="frontend">
+        <span>As cores, fontes e como as coisas mudam de lugar quando clico.</span>
+            </label>
+
+            <label class="pergunta1">
+        <input type="radio" name="pergunta1" value="backend">
+        <span>A velocidade com que as páginas carregam.</span>
+            </label>
+
+            <label class="pergunta1"> 
+        <input type="radio" name="pergunta1" value="dados">
+        <span>Os gráficos, relatórios e como o site sugere coisas que eu gosto.</span>
+            </label>
+
+            <label class="pergunta1">
+        <input type="radio" name="pergunta1" value="design/ux">
+        <span>Se o site é fácil de usar e se eu acho os botões sem passar raiva.</span>
+            </label>
+        
+
+        <h2>2 - Qual tipo de desafio te deixa mais empolgado para resolver?</h2>
+        
+            <label class="pergunta2">
+                <input type="radio" name="pergunta2" value="frontend">
+                <span>Criar animações visuais e deixar a tela idêntica a um desenho de design.</span>
+            </label>
+
+            <label class="pergunta2">
+                <input type="radio" name="pergunta2" value="backend">
+                <span>Criar a lógica interna, calcular fórmulas e conectar com bancos de dados.</span>
+            </label>
+
+            <label class="pergunta2">
+                <input type="radio" name="pergunta2" value="dados">
+                <span>Analisar planilhas, cruzar informações e encontrar padrões ocultos em textos.</span>
+            </label>
+
+            <label class="pergunta2">
+                <input type="radio" name="pergunta2" value="design/ux">
+                <span>Conversar com usuários, entender as dores deles e desenhar a jornada ideal.</span>
+            </label>
+
+        <h2>3 - Se você fosse montar um quebra-cabeça, qual seria a sua estratégia?</h2>
+            <label class="pergunta3">
+                <input type="radio" name="pergunta3" value="frontend">
+                <span>Separar pelas cores das peças e montar a imagem de fora para dentro.</span>
+            </label>
+
+            <label class="pergunta3">
+                <input type="radio" name="pergunta3" value="backend">
+                <span>Entender a lógica do corte das peças e encaixá-las pelo formato estrutural.</span>
+            </label>
+
+            <label class="pergunta3">
+                <input type="radio" name="pergunta3" value="dados">
+                <span>Contar as peças, calcular o tempo médio e criar um método ultra eficiente de montagem.</span>
+            </label>
+
+            <label class="pergunta3">
+                <input type="radio" name="pergunta3" value="design/ux">
+                <span>Pensar em como tornar a experiência de montar o quebra-cabeça mais divertida para o grupo.</span>
+            </label>
+
+        <h2>4 - Escolha uma ferramenta ou conceito que te gera mais curiosidade:</h2>
+
+            <label class="pergunta4">
+
+                <input type="radio" name="pergunta4" value="frontend">
+                <span>Efeitos visuais modernos, transições de tela e estilização com CSS avançado.</span>
+            </label>
+
+            <label class="pergunta4"> 
+                <input type="radio" name="pergunta4" value="backend">
+                <span>Criação de APIs robustas, servidores na nuvem e segurança de dados.</span>
+            </label>
+
+            <label class="pergunta4">
+                <input type="radio" name="pergunta4" value="dados">
+                <span>Modelos de Inteligência Artificial, algoritmos de recomendação e estatística.</span>
+            </label>
+
+            <label class="pergunta4">
+                <input type="radio" name="pergunta4" value="design/ux">
+                <span>Criação de protótipos interativos no Figma e testes de usabilidade.</span>
+            </label>
+
+        <h2>5 - Como você se descreve resolvendo problemas no dia a dia?</h2>
+            <label class="pergunta5">
+
+                <input type="radio" name="pergunta5" value="frontend">
+                <span>Detalhista e muito focado na estética e no acabamento final das coisas.</span>
+            </label>
+
+            <label class="pergunta5"> 
+                <input type="radio" name="pergunta5" value="backend">
+                <span>Pragmático, focado em fazer as coisas funcionarem por trás dos panos de forma sólida.</span>
+            </label>
+
+            <label class="pergunta5">
+                <input type="radio" name="pergunta5" value="dados">
+                <span>Investigativo, prefiro tomar decisões baseadas em fatos, números e evidências.</span>
+            </label>
+
+            <label class="pergunta5">
+                <input type="radio" name="pergunta5" value="design/ux">
+                <span>Empático, sempre me coloco no lugar do outro para entender o que ele precisa.</span>
+            </label>
+
+            <button class="botao-enviar"type="submit">Enviar Respostas</button>
+    </form>
+        </div>
+    <script src="Quiz.js"></script>
+</body>
+</html>>
