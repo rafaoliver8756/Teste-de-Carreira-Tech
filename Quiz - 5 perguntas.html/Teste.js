@@ -2,11 +2,12 @@ const boasVindas = document.querySelector(".boas-vindas");
 const botaoIniciarTeste = document.querySelector(".botao-iniciar-teste");
 const teste = document.querySelector(".teste");
 const form = document.querySelector("form");
-
+const resultadoDiv = document.querySelector("#resultado");
 
 botaoIniciarTeste.addEventListener("click", function() {
     boasVindas.style.display= "none";
     teste.style.display = "flex";
+    window.scrollTo(0, 0); //quando a página recarregar a tela volta para o topo
 
 });
 //lógica do teste
@@ -30,12 +31,17 @@ form.addEventListener("submit", function(evento) {
     const vencedores = Object.keys(pontuacao).filter(function(area) {
         return pontuacao[area] === maiorPontuacao;
 });
-const resultadoDiv = document.querySelector("#resultado");
+
+
+    form.style.display= "none";
+    resultadoDiv.style.display = "flex";
+    window.scrollTo(0, 0);
+
 
 if (vencedores.length === 1) {
-  resultadoDiv.textContent = "Seu perfil é: " + vencedores[0];
+  resultadoDiv.textContent = "Parabéns você é " + vencedores[0];
 } else {
-  resultadoDiv.textContent = "Empate entre: " + vencedores.join(" e ");
+  resultadoDiv.textContent = "Parabéns você é " + vencedores.join(" e ");
 }
 
 });
