@@ -24,9 +24,11 @@ Esse projeto foi feito para praticar lógica de programação com JavaScript pur
 
 ## ▶️ Como executar
 
+
 🔗 **[Acesse o quiz ao vivo](https://teste-tech-web.netlify.app/)**
 
-## 📚 Aprendizados
+
+## 📚 Aprendizados 
 
 Durante esse projeto, pratiquei:
 - Manipulação de `display` para alternar entre telas
